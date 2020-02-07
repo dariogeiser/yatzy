@@ -13,10 +13,7 @@ import javafx.scene.input.MouseEvent;
 
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 
 public class GameController {
@@ -292,6 +289,7 @@ public class GameController {
 
 
     public void onAces(MouseEvent mouseEvent) {
+        leftSide = true;
         Label label = (Label) mouseEvent.getSource();
         int playerNumberFromId = Character.getNumericValue(label.getId().charAt(1));
         if (playerNumberFromId == 1 && currentPlayer.getName().equals(player1.getName()) || playerNumberFromId == 2 && currentPlayer.getName().equals(player2.getName())) {
@@ -322,6 +320,7 @@ public class GameController {
     }
 
     public void onTwos(MouseEvent mouseEvent) {
+        leftSide = true;
         Label label = (Label) mouseEvent.getSource();
         int playerNumberFromId = Character.getNumericValue(label.getId().charAt(1));
         if (playerNumberFromId == 1 && currentPlayer.getName().equals(player1.getName()) || playerNumberFromId == 2 && currentPlayer.getName().equals(player2.getName())) {
@@ -349,6 +348,7 @@ public class GameController {
     }
 
     public void onThrees(MouseEvent mouseEvent) {
+        leftSide = true;
         Label label = (Label) mouseEvent.getSource();
         int playerNumberFromId = Character.getNumericValue(label.getId().charAt(1));
         if (playerNumberFromId == 1 && currentPlayer.getName().equals(player1.getName()) || playerNumberFromId == 2 && currentPlayer.getName().equals(player2.getName())) {
@@ -376,6 +376,7 @@ public class GameController {
     }
 
     public void onFours(MouseEvent mouseEvent) {
+        leftSide = true;
         Label label = (Label) mouseEvent.getSource();
         int playerNumberFromId = Character.getNumericValue(label.getId().charAt(1));
         if (playerNumberFromId == 1 && currentPlayer.getName().equals(player1.getName()) || playerNumberFromId == 2 && currentPlayer.getName().equals(player2.getName())) {
@@ -403,6 +404,7 @@ public class GameController {
     }
 
     public void onFives(MouseEvent mouseEvent) {
+        leftSide = true;
         Label label = (Label) mouseEvent.getSource();
         int playerNumberFromId = Character.getNumericValue(label.getId().charAt(1));
         if (playerNumberFromId == 1 && currentPlayer.getName().equals(player1.getName()) || playerNumberFromId == 2 && currentPlayer.getName().equals(player2.getName())) {
@@ -429,6 +431,7 @@ public class GameController {
     }
 
     public void onSixes(MouseEvent mouseEvent) {
+        leftSide = true;
         Label label = (Label) mouseEvent.getSource();
         int playerNumberFromId = Character.getNumericValue(label.getId().charAt(1));
         if (playerNumberFromId == 1 && currentPlayer.getName().equals(player1.getName()) || playerNumberFromId == 2 && currentPlayer.getName().equals(player2.getName())) {
@@ -456,24 +459,313 @@ public class GameController {
     }
 
     public void onThreeOfKind(MouseEvent mouseEvent) {
+        leftSide = false;
+        Label label = (Label) mouseEvent.getSource();
+        int playerNumberFromId = Character.getNumericValue(label.getId().charAt(1));
+        if (playerNumberFromId == 1 && currentPlayer.getName().equals(player1.getName()) || playerNumberFromId == 2 && currentPlayer.getName().equals(player2.getName())) {
+            if (!newRound) {
+                selectedLabel.setStyle("-fx-background-color: lightgray");
+                selectedLabel.setText("");
+            }
+            if (label.getText().equals("")) {
+                selectedLabel = label;
+                selectedLabel.setStyle("-fx-background-color: grey");
+                int values = 0;
+                int ones = 0;
+                int twos = 0;
+                int threes = 0;
+                int fours = 0;
+                int fives = 0;
+                int sixes = 0;
+                for (int value : selectedDices) {
+                    values += value;
+                    switch (value) {
+                        case 1:
+                            ones++;
+                            break;
+                        case 2:
+                            twos++;
+                            break;
+                        case 3:
+                            threes++;
+                            break;
+                        case 4:
+                            fours++;
+                            break;
+                        case 5:
+                            fives++;
+                            break;
+                        case 6:
+                            sixes++;
+                            break;
+
+                    }
+                }
+                if (ones < 3 && twos < 3 && threes < 3 && fours < 3 && fives < 3 && sixes < 3) {
+                    values = 0;
+                }
+
+                selectedLabel.setText(String.valueOf(values));
+                leftSide = false;
+                newRound = false;
+
+            }
+        }
     }
 
     public void onFourOfKind(MouseEvent mouseEvent) {
+        leftSide = false;
+        Label label = (Label) mouseEvent.getSource();
+        int playerNumberFromId = Character.getNumericValue(label.getId().charAt(1));
+        if (playerNumberFromId == 1 && currentPlayer.getName().equals(player1.getName()) || playerNumberFromId == 2 && currentPlayer.getName().equals(player2.getName())) {
+            if (!newRound) {
+                selectedLabel.setStyle("-fx-background-color: lightgray");
+                selectedLabel.setText("");
+            }
+            if (label.getText().equals("")) {
+                selectedLabel = label;
+                selectedLabel.setStyle("-fx-background-color: grey");
+                int values = 0;
+                int ones = 0;
+                int twos = 0;
+                int threes = 0;
+                int fours = 0;
+                int fives = 0;
+                int sixes = 0;
+                for (int value : selectedDices) {
+                    values += value;
+                    switch (value) {
+                        case 1:
+                            ones++;
+                            break;
+                        case 2:
+                            twos++;
+                            break;
+                        case 3:
+                            threes++;
+                            break;
+                        case 4:
+                            fours++;
+                            break;
+                        case 5:
+                            fives++;
+                            break;
+                        case 6:
+                            sixes++;
+                            break;
+
+                    }
+                }
+                if (ones < 4 && twos < 4 && threes  < 4 && fours < 4 && fives < 4 && sixes <  4) {
+                    values = 0;
+                }
+
+                selectedLabel.setText(String.valueOf(values));
+                leftSide = false;
+                newRound = false;
+
+            }
+        }
     }
 
     public void onFullHouse(MouseEvent mouseEvent) {
+        leftSide = false;
+        Label label = (Label) mouseEvent.getSource();
+        int playerNumberFromId = Character.getNumericValue(label.getId().charAt(1));
+        if (playerNumberFromId == 1 && currentPlayer.getName().equals(player1.getName()) || playerNumberFromId == 2 && currentPlayer.getName().equals(player2.getName())) {
+            if (!newRound) {
+                selectedLabel.setStyle("-fx-background-color: lightgray");
+                selectedLabel.setText("");
+            }
+            if (label.getText().equals("")) {
+                selectedLabel = label;
+                selectedLabel.setStyle("-fx-background-color: grey");
+                int values = 0;
+                List<Integer> valuesKind1 = new ArrayList<>();
+                List<Integer> valuesKind2 = new ArrayList<>();
+                for (int value : selectedDices) {
+                    System.out.println(value);
+                    if (valuesKind1.size() >= 1) {
+                        if (valuesKind1.contains(value)) {
+                            valuesKind1.add(value);
+                        } else {
+                            if (valuesKind2.size() >= 1) {
+                                if (valuesKind2.contains(value)) {
+                                    valuesKind2.add(value);
+                                }
+                            }
+
+                            if (valuesKind2.size() == 0) {
+                                valuesKind2.add(value);
+                            }
+                        }
+                    }
+
+
+                    if (valuesKind1.size() == 0) {
+                        valuesKind1.add(value);
+                    }
+
+                }
+
+                System.out.println(valuesKind1.size());
+                System.out.println(valuesKind2.size() );
+                if (valuesKind1.size() + valuesKind2.size() != 5) {
+                    values = 0;
+                } else {
+                    values = 25;
+                }
+
+                selectedLabel.setText(String.valueOf(values));
+                leftSide = false;
+                newRound = false;
+
+            }
+        }
     }
 
     public void onSmallStraight(MouseEvent mouseEvent) {
+        leftSide = false;
+        Label label = (Label) mouseEvent.getSource();
+        int playerNumberFromId = Character.getNumericValue(label.getId().charAt(1));
+        if (playerNumberFromId == 1 && currentPlayer.getName().equals(player1.getName()) || playerNumberFromId == 2 && currentPlayer.getName().equals(player2.getName())) {
+            if (!newRound) {
+                selectedLabel.setStyle("-fx-background-color: lightgray");
+                selectedLabel.setText("");
+            }
+            if (label.getText().equals("")) {
+
+                selectedLabel = label;
+                selectedLabel.setStyle("-fx-background-color: grey");
+                int values = 0;
+
+                Collections.sort(selectedDices);
+                int lastValue = -100;
+                int count = 0;
+                for (int value : selectedDices) {
+                    System.out.println("last val: " + lastValue);
+                    System.out.println("curr val: " + value);
+                    if (lastValue + 1 == value) {
+
+                        count++;
+                        System.out.println(count);
+                    }
+
+                    lastValue = value;
+                }
+
+                if (count < 3) {
+                    values = 0;
+                } else {
+                    values = 30;
+                }
+
+                selectedLabel.setText(String.valueOf(values));
+                leftSide = false;
+                newRound = false;
+
+            }
+        }
+
     }
 
     public void onLargeStraight(MouseEvent mouseEvent) {
+        leftSide = false;
+        Label label = (Label) mouseEvent.getSource();
+        int playerNumberFromId = Character.getNumericValue(label.getId().charAt(1));
+        if (playerNumberFromId == 1 && currentPlayer.getName().equals(player1.getName()) || playerNumberFromId == 2 && currentPlayer.getName().equals(player2.getName())) {
+            if (!newRound) {
+                selectedLabel.setStyle("-fx-background-color: lightgray");
+                selectedLabel.setText("");
+            }
+            if (label.getText().equals("")) {
+
+                selectedLabel = label;
+                selectedLabel.setStyle("-fx-background-color: grey");
+                int values = 0;
+
+                Collections.sort(selectedDices);
+                int lastValue = -100;
+                int count = 0;
+                for (int value : selectedDices) {
+                    values += value;
+                    if (lastValue + 1 == value) {
+                        count++;
+                    }
+
+                    lastValue = value;
+                }
+
+                if (count < 4) {
+                    values = 0;
+                } else {
+                    values = 50;
+                }
+                selectedLabel.setText(String.valueOf(values));
+                leftSide = false;
+                newRound = false;
+
+            }
+
+        }
     }
 
     public void onYatzii(MouseEvent mouseEvent) {
+        leftSide = false;
+        Label label = (Label) mouseEvent.getSource();
+        int playerNumberFromId = Character.getNumericValue(label.getId().charAt(1));
+        if (playerNumberFromId == 1 && currentPlayer.getName().equals(player1.getName()) || playerNumberFromId == 2 && currentPlayer.getName().equals(player2.getName())) {
+            if (!newRound) {
+                selectedLabel.setStyle("-fx-background-color: lightgray");
+                selectedLabel.setText("");
+            }
+            if (label.getText().equals("")) {
+                selectedLabel = label;
+                selectedLabel.setStyle("-fx-background-color: grey");
+
+                int values = 0;
+                int valueKind = selectedDices.get(0);
+                int count = 0;
+
+                for (int value : selectedDices) {
+                    if (value == valueKind) {
+                        count++;
+                    }
+                }
+                if (count != 5) {
+                    values = 0;
+                } else {
+                    values = 50;
+                }
+                selectedLabel.setText(String.valueOf(values));
+                leftSide = false;
+                newRound = false;
+
+            }
+        }
     }
 
     public void onChance(MouseEvent mouseEvent) {
+        Label label = (Label) mouseEvent.getSource();
+        int playerNumberFromId = Character.getNumericValue(label.getId().charAt(1));
+        if (playerNumberFromId == 1 && currentPlayer.getName().equals(player1.getName()) || playerNumberFromId == 2 && currentPlayer.getName().equals(player2.getName())) {
+            if (!newRound) {
+                selectedLabel.setStyle("-fx-background-color: lightgray");
+                selectedLabel.setText("");
+            }
+            if (label.getText().equals("")) {
+                selectedLabel = label;
+                selectedLabel.setStyle("-fx-background-color: grey");
+                int values = 0;
+                for (int value : selectedDices) {
+                    values += value;
+                }
+                selectedLabel.setText(String.valueOf(values));
+                leftSide = false;
+                newRound = false;
+
+            }
+        }
     }
 
 

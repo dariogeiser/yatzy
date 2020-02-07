@@ -324,12 +324,12 @@
                         </Label>
                      </children>
                   </VBox>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onThreeOfKind" prefWidth="127.0" style="-fx-background-color: lightgray;">
+                  <Label fx:id="g1" alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onThreeOfKind" prefWidth="127.0" style="-fx-background-color: lightgray;">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onThreeOfKind" prefWidth="127.0" style="-fx-background-color: lightgray;">
+                  <Label fx:id="g2" alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onThreeOfKind" prefWidth="127.0" style="-fx-background-color: lightgray;">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -355,12 +355,12 @@
                         </Label>
                      </children>
                   </VBox>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onFourOfKind" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
+                  <Label fx:id="h1" alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onFourOfKind" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onFourOfKind" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
+                  <Label fx:id="h2" alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onFourOfKind" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -386,12 +386,12 @@
                         </Label>
                      </children>
                   </VBox>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onFullHouse" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
+                  <Label fx:id="i1" alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onFullHouse" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onFullHouse" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
+                  <Label fx:id="i2" alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onFullHouse" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -417,12 +417,12 @@
                         </Label>
                      </children>
                   </VBox>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onSmallStraight" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
+                  <Label fx:id="j1" alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onSmallStraight" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onSmallStraight" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
+                  <Label fx:id="j2" alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onSmallStraight" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -448,12 +448,12 @@
                         </Label>
                      </children>
                   </VBox>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onLargeStraight" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
+                  <Label fx:id="k1" alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onLargeStraight" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onLargeStraight" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
+                  <Label fx:id="k2" alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onLargeStraight" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -479,12 +479,12 @@
                         </Label>
                      </children>
                   </VBox>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onYatzii" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
+                  <Label fx:id="l1" alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onYatzii" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onYatzii" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
+                  <Label fx:id="l2" alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onYatzii" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -510,12 +510,12 @@
                         </Label>
                      </children>
                   </VBox>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onChance" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
+                  <Label fx:id="m1" alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onChance" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onChance" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
+                  <Label fx:id="m2" alignment="CENTER" maxHeight="1.7976931348623157E308" onMouseClicked="#onChance" prefHeight="100.0" prefWidth="127.0" style="-fx-background-color: lightgray;">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -527,7 +527,7 @@
             </HBox>
             <HBox alignment="CENTER_LEFT" maxHeight="100.0" minHeight="-Infinity" prefHeight="40.0" prefWidth="315.0">
                <children>
-                  <Label maxHeight="1.7976931348623157E308" prefHeight="40.0" prefWidth="181.0" style="-fx-background-color: grey;" text="   Left Subtotal" textFill="WHITE">
+                  <Label maxHeight="1.7976931348623157E308" prefHeight="40.0" prefWidth="181.0" style="-fx-background-color: grey;" text="   Rigth Subtotal" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
